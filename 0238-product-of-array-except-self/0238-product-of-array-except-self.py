@@ -18,7 +18,6 @@ class Solution:
             num *= nums[i]
             postfix.append(num)
             if len(postfix) == len(nums):
-                num = 0
                 postfix = list(reversed(postfix))
 
     
