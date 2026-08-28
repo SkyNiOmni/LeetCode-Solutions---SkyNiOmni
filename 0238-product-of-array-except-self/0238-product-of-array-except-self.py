@@ -7,18 +7,18 @@ class Solution:
 
         postfix = []
 
-        i = 1
-        for num in range(len(nums)):
-            i *= nums[num]
-            prefix.append(i)
+        num = 1
+        for i in range(len(nums)):
+            num *= nums[i]
+            prefix.append(num)
             if len(prefix) == len(nums):
-                i = 1
+                num = 1
 
-        for num in reversed(range(len(nums))):
-            i *= nums[num]
-            postfix.append(i)
+        for i in reversed(range(len(nums))):
+            num *= nums[i]
+            postfix.append(num)
             if len(postfix) == len(nums):
-                i = 0
+                num = 0
                 postfix = list(reversed(postfix))
 
     
@@ -30,5 +30,6 @@ class Solution:
         return(answer)
         
        
+
 
 
