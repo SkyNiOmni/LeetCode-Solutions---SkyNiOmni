@@ -30,10 +30,16 @@ class Solution:
         for box_row in range(3):
             for box_col in range(3): 
                 box = []
+
                 for r in range(box_row  * 3, box_row * 3 + 3):
                     for c in range(box_col * 3, box_col * 3 + 3):
                         box.append(board[r][c])
-                only_nums = [x for x in box if x != "."]
+
+                only_nums = []
+                for i in box:
+                    if i != ".":
+                        only_nums.append(i)
+                        
                 if len(only_nums) != len(set(only_nums)):
                     answer = False  
 
