@@ -2,9 +2,7 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         
         sort = sorted(set(nums))
-        
-        print(sort)
-
+    
         answer = []
         longest = 0
 
