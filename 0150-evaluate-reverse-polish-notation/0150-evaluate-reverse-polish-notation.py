@@ -9,8 +9,10 @@ class Solution:
         
         for i in tokens:
             if i in operands:
-                right = stack.pop()
-                left = stack.pop()
+                right = stack[-1]
+                stack.pop()
+                left = stack[-1]
+                stack.pop()
                 stack.append(operands[i](left, right))
                 continue
             stack.append(int(i))
